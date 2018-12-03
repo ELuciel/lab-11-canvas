@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<canvas id ="sketch" width="1000" height="1000">
+</canvas>
+<script>
+var mySketch = document.getElementById('sketch');
+var context = mySketch.getContext('2d');
+var radius = prompt ("What is the radius of the circle? ");
+radius = parseInt(radius);
+function draw(){
+context.fillStyle ='#4169E1';
+context.beginPath();
+context.arc(500, 500, radius, 0, 2*Math.PI, false);
+context.closePath();
+context.fill();
+}
+draw();
+</script>
+</html>
