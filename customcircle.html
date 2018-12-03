@@ -10,8 +10,18 @@ var mySketch = document.getElementById('sketch');
 var context = mySketch.getContext('2d');
 var radius = prompt ("What is the radius of the circle? ");
 radius = parseInt(radius);
+var color = prompt("What is the color?(red, green, or blue)");
+if (color == 'red'){
+color ='#FF0000';
+}
+else if (color == 'green'){
+color = '#008000';
+}
+else {
+color = '#0000FF';
+}
 function draw(){
-context.fillStyle ='#4169E1';
+context.fillStyle =color;
 context.beginPath();
 context.arc(500, 500, radius, 0, 2*Math.PI, false);
 context.closePath();
