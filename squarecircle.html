@@ -2,19 +2,23 @@
 <html>
 <head>
 </head>
-<body onload ="draw()">
+<body>
 <canvas id ="sketch" width="300" height="300">
 </canvas>
 <script>
 var sketch = document.getElementById('sketch');
-var sketch = sketch.getContext('2d');
+var context = sketch.getContext('2d');
 function draw(){
-var sketch = document.getElementById('sketch');
-var context = sketch.getContext("2d");
 context.fillRect(0, 0, sketch.width, sketch.height);
 
+context.fillStyle ='#0000FF';
+context.beginPath();
+context.arc(250, 150, 50, 6, 2 * Math.PI, true);
+context.closePath();
+context.fill();
 context.fillStyle ="#FF0000";
-context.fillRect(0, 0, 300, 300);
+context.fillRect(0, 50, 150, 150);
 }
+draw();
 </script>
 </html>
